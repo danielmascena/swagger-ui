@@ -3,7 +3,6 @@
         <div class='content'>
             <div class='heading'>
                 <h2 class='operation-title'>{{summary}}</h2>
-
                 <h3>
                     <span class='http_method'>
                         <a href='#!/{{encodedParentId}}/{{nickname}}'>{{method}}</a>
@@ -26,7 +25,6 @@
             {{#if description}}
                 <div class="markdown action-summary">{{{description}}}</div>
             {{/if}}
-
 
             <form accept-charset="UTF-8" class="sandbox">
 
@@ -69,19 +67,17 @@
                             <button type="button" class="api-ic ic-off btn btn-default pull-right">Oauth</button>
                         </div>
                         {{/oauth}}
-
                     </div>
 
                     {{#if type}}
                         <div class="response-content-type"/>
                     {{/if}}
-
                 </div>
 
                 {{#if responseMessages}}
                     <div style="margin:0;padding:0;display:inline"></div>
-                    <h4 data-control data-toggle="collapse" data-target="#response-{{parentId}}_{{nickname}}">
-                        Response Messages
+                    <h4 class="response-messages" data-control data-toggle="collapse" data-target="#response-{{parentId}}_{{nickname}}">
+                        Mensagens de Resposta:
                     </h4>
 
                     <div data-content class="responses-wrapper collapse in" id="response-{{parentId}}_{{nickname}}">
@@ -92,12 +88,11 @@
                     </div>
                 {{/if}}
             </form>
-
         </div>
 
         <div class="samples">
-                <span class="model-signature">
-                </span>
+            <span class="model-signature">
+            </span>
         </div>
 
         <div class="modal" id="modal-{{parentId}}_{{nickname}}">
