@@ -48,7 +48,7 @@
 @media (min-width: 992px) {
     .swagger-section #resources:before {
         content: "";
-        background: #5c666f;
+        background: #8F8E8D;
         height: 100%;
         width: 50%;
         top: 0;
@@ -109,7 +109,7 @@
 .swagger-section h2.operation-title {
     display: block;
     float: none;
-    color: #333;
+    color: #303030;
     padding: 0;
     font-size: 25px;
     line-height: 1.3;
@@ -119,7 +119,7 @@
 
 @media (min-width: 992px) {
     .swagger-section h2.operation-title {
-        font-size: 32px;
+        font-size: 30px;
         font-weight: 200;
         line-height: 1;
         padding-right: 160px
@@ -146,7 +146,7 @@
 
 .swagger-section .heading .path a {
     font-weight: 400;
-    color: #838991;
+    color: #6B6B6A;
     font-size: 12px;
     max-width: 230px;
     overflow: hidden;
@@ -158,7 +158,6 @@
 
 @media (min-width: 992px) {
     .swagger-section .heading .path a {
-        font-size: 16px;
         max-width: 545px;
     }
 }
@@ -174,12 +173,11 @@
 }
 
 .swagger-section .heading .http_method a {
-    color: #fff;
+    color: #0890FA;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
     border-radius: 20px;
     padding: 2px 10px;
-    font-weight: 700;
     display: inline-block
 }
 
@@ -188,7 +186,7 @@
     padding: 20px;
     color: #838991
 }
-
+/*
 .swagger-section .operation.get .http_method a, .swagger-section .operation.get .http_method span {
     background: #44c7f4
 }
@@ -204,7 +202,7 @@
 .swagger-section .operation.patch .http_method a, .swagger-section .operation.patch .http_method span {
     background: #ff9a57
 }
-
+*/
 .swagger-section .ui-form-control.error {
     border-color: #fd8888;
     border-width: 2px
@@ -213,7 +211,7 @@
 .swagger-section .parameter-item {
     min-width: 320px;
     background: #f8f8f9;
-    color: #5c666f;
+    color: #0890FA;
     font-size: 14px;
     margin-bottom: 20px
 }
@@ -226,18 +224,19 @@
 .swagger-section .parameter-item .small-description code {
     padding: 2px 4px;
     border-radius: 4px;
-    font-size: 10px;
-    border: 1px solid rgba(0, 0, 0, .07)
+    font-size: 12px;
 }
 
 .swagger-section .parameter-item .small-description code.code-signature {
-    background: 0 0;
-    color: gray;
+    background: transparent;
+    color: #6B6B6A;
     margin-right: 5px
 }
 
 .swagger-section .parameter-item .small-description .markdown {
     display: inline-table;
+    font-weight: 600;
+    color: #6B6B6A;
 }
 
 .swagger-section .parameter-item .small-description .markdown h1,
@@ -256,7 +255,6 @@
     .swagger-section .parameter-item {
         margin: 0 20px 20px;
         border-radius: 3px;
-        border: 1px solid #e8eaeb;
         min-width: 0
     }
 }
@@ -271,33 +269,29 @@
     }
 }
 
-/*
 .swagger-section .parameter-item .parameter-content-type {
-    display: none
+    font-weight: 600;
 }
-*/
+
 .swagger-section .parameter-item .param-property {
     padding: 20px;
     line-height: 1.4;
     border-bottom: 1px solid #e8eaeb;
-    min-height: 59px
+    min-height: 59px;
+    margin: auto;
 }
 
 @media (min-width: 992px) {
     .swagger-section .parameter-item .param-property {
         position: relative;
-        padding-left: 150px
-    }
-
-    .swagger-section .parameter-item .param-property:hover {
-        background: #f0f0f2
+        width: 70%;
+        text-align: left;
     }
 }
 
 .swagger-section .parameter-item .param-property:before {
     content: attr(data-label);
     display: block;
-    font-weight: 700;
     margin-bottom: 15px;
     white-space: nowrap;
     overflow: hidden;
@@ -306,14 +300,9 @@
 
 @media (min-width: 992px) {
     .swagger-section .parameter-item .param-property:before {
-        position: absolute;
-        top: 28px;
-        left: 0;
         display: inline-block;
         width: 150px;
         vertical-align: top;
-        text-align: right;
-        padding: 0 20px
     }
 }
 
@@ -362,10 +351,10 @@
 
 @media (min-width: 992px) {
     .swagger-section .operations .model-signature h4 {
-        color: #fff;
+        color: #E5E4E3;
         text-transform: uppercase;
         letter-spacing: .08em;
-        font-size: 14px
+        font-size: 18px;
     }
 }
 
@@ -545,7 +534,7 @@
 }
 
 .swagger-section pre {
-    background: #4e575e;
+    background: #6B6B6A;
     margin: 0;
     word-wrap: break-word !important;
     max-height: none;
@@ -554,13 +543,30 @@
 }
 
 .swagger-section pre code {
-    color: #fff;
+    color: #E5E4E3;
     background: none !important
 }
 
+.response-container {
+  margin: auto;
+}
+.sandbox { text-align: center; }
+.sandbox h4[data-parm-toggle] {
+  text-align: left;
+  float: left;
+  padding-left: 40px !important;
+  width: 100%;
+  width: -webkit-fill-available;
+}
 @media (min-width: 992px) {
     .swagger-section .responses-wrapper {
-        padding: 0 20px
+        padding: 0 0 20px;
+        display: inline-block;
+    }
+    .swagger-section .sandbox .responses-wrapper table.fullwidth {
+        width: auto;
+        display: inline-table;
+        font-size: 20px;
     }
 }
 
@@ -576,20 +582,12 @@
     }
 }
 
-.swagger-section .operation-status td {
+.swagger-section .responses-wrapper .operation-status td {
     width: auto;
-    vertical-align: middle;
+    color: #6B6B6A;
+    font-weight: 600;
     border-bottom: 1px solid #e8eaeb;
-    line-height: 1.4;
-    padding: 15px
-}
-
-.swagger-section .operation-status td:nth-child(1) {
-    padding: 20px
-}
-
-.swagger-section .operation-status td:nth-child(2) {
-    color: #8c9299
+    padding: 15px 5px;
 }
 
 .swagger-section .token-generator {
@@ -726,15 +724,15 @@
 }
 
 .swagger-section .token-generator .btn {
-    background: #fff;
     border: 0;
     float: right
 }
 
 @media (min-width: 992px) {
     .swagger-section .token-generator .btn {
-        border: 1px solid #cfd3d5;
-        height: 32px
+        height: 32px;
+        margin-top: 30px;
+        color: #0890FA;
     }
 }
 
@@ -806,7 +804,7 @@
 }
 
 .swagger-section .token-generator .scope-selector {
-    padding: 15px 0
+    padding: 15px 0 0;
 }
 
 .swagger-section .token-generator .scope-selector:after {
@@ -832,12 +830,9 @@
     }
 }
 
-.swagger-section .token-generator .scope-selector .controls {
-    width: calc(100% - 55px)
-}
-
+.swagger-section .token-generator .scope-selector .controls,
 .swagger-section .token-generator .scope-selector .cta {
-    width: 55px
+    width: 100%;
 }
 
 .swagger-section .token-generator .scope-selector .cta:after {
@@ -850,20 +845,16 @@
 }
 
 .swagger-section .token-generator label {
-    text-transform: uppercase;
     letter-spacing: .08em;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     display: inline-block;
-    margin-bottom: 10px
 }
 
 @media (min-width: 992px) {
     .swagger-section .token-generator label {
-        color: #5c666f;
-        font-size: 13px;
-        margin-bottom: 15px
+        color: #0890FA;
     }
 }
 
@@ -871,14 +862,18 @@
     font-size: 16px;
     padding: 20px;
     margin: 0;
-    color: #5c666f;
+    color: #6B6B6A;
     cursor: pointer;
     box-shadow: inset 0 -1px 0 0 #e8eaeb;
     transition: box-shadow 0 300ms ease;
-    min-width: 320px;
-    position: relative
+    position: relative;
+    display: inline-block;
 }
-
+@media (min-width: 992px) {
+  .swagger-section .operations h4.response-messages {
+    padding: 15px 10px;
+  }
+}
 @media (min-width: 992px) {
     .swagger-section .operations h4 {
         box-shadow: none;
@@ -1126,7 +1121,7 @@
         text-transform: uppercase;
         letter-spacing: .08em;
         color: #5c666f;
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 700;
         margin-bottom: 15px;
         padding: 0 20px
@@ -1194,7 +1189,7 @@
     .swagger-section .sticky-nav [data-navigator] .item {
         color: #5c666f;
         padding: 9px 9px 9px 40px;
-        font-size: 14px;
+        font-size: 12px;
         background: #f3f3f4
     }
 
@@ -1372,7 +1367,8 @@
     margin: 20px 20px 40px;
     line-height: 1.4;
     background: #ebebee;
-    font-size: 13px
+    font-size: 12px;
+    color: #6B6B6A;
 }
 
 @media (min-width: 992px) {
@@ -1508,7 +1504,8 @@ body {
 }
 
 .swagger-section .sandbox_header {
-    padding: 0 20px 20px
+    padding: 0 20px 20px;
+    text-align: center;
 }
 
 .swagger-section .sandbox_header a {
@@ -1516,7 +1513,9 @@ body {
 }
 
 .swagger-section .sandbox_header .btn-primary {
-    margin-right: 5px
+    width: 240px;
+    height: 36px;
+    background-color: #0890FA;
 }
 
 .swagger-section #resources a.toggle-samples {
@@ -1648,13 +1647,12 @@ body {
 
 .swagger-section .swagger-ui-wrap {
     line-height: 1;
-    font-family: proxima-nova, sans-serif;
     margin-left: auto;
     margin-right: auto
 }
 
 .swagger-section .swagger-ui-wrap b, .swagger-section .swagger-ui-wrap strong {
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700
 }
 
@@ -1743,8 +1741,9 @@ body {
 
 .swagger-section .swagger-ui-wrap .info_title {
     padding-bottom: 10px;
-    font-weight: 700;
-    font-size: 25px
+    font-weight: 600;
+    font-size: 16px;
+    color: #303030;
 }
 
 .swagger-section .swagger-ui-wrap div.big p, .swagger-section .swagger-ui-wrap p.big {
@@ -1795,7 +1794,7 @@ body {
 }
 
 .swagger-section .swagger-ui-wrap .model-signature {
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
     line-height: 1.5em
 }
@@ -1842,7 +1841,7 @@ body {
 }
 
 .swagger-section .swagger-ui-wrap .required {
-    font-weight: 700
+    color: #A3A2A1;
 }
 
 .swagger-section .swagger-ui-wrap h1 {
@@ -1850,7 +1849,7 @@ body {
     font-size: 1.5em;
     line-height: 1.3em;
     padding: 10px 0;
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700
 }
 
@@ -1883,11 +1882,11 @@ body {
 .swagger-section .swagger-ui-wrap caption, .swagger-section .swagger-ui-wrap td, .swagger-section .swagger-ui-wrap th {
     text-align: left;
     font-weight: 400;
-    vertical-align: middle
+    vertical-align: baseline;
 }
 
 .swagger-section .swagger-ui-wrap form.formtastic fieldset.inputs ol li.text textarea {
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     height: 250px;
     padding: 4px;
     display: block;
@@ -1967,7 +1966,7 @@ body {
 }
 
 .swagger-section .swagger-ui-wrap ul#resources {
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: .9em
 }
 
@@ -2154,7 +2153,7 @@ body {
     padding: 10px 0;
     font-size: .8em;
     border-top: 1px solid #ddd;
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #999;
     font-style: italic
 }
@@ -2166,12 +2165,12 @@ body {
 
 .swagger-section .swagger-ui-wrap h3 {
     color: #000;
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 10px 0
 }
 
 .swagger-section .swagger-ui-wrap .markdown ol, .swagger-section .swagger-ui-wrap .markdown ul {
-    font-family: proxima-nova, sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 5px 0 10px;
     padding: 0 0 0 18px;
     list-style-type: disc
