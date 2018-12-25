@@ -15,13 +15,14 @@
             </div>
 
             <a href="javascript:;" class="toggle-samples" data-toggle="tooltip" data-placement="left"
-               data-original-title title>
+              data-original-title title>
                 <span class="text">Show samples</span><span class="circle-icon"></span>
             </a>
 
             {{#if deprecated}}
                 <h4>Warning: Deprecated</h4>
             {{/if}}
+
             {{#if description}}
                 <div class="markdown action-summary">{{{description}}}</div>
             {{/if}}
@@ -33,19 +34,14 @@
                         data-target="#parm-{{parentId}}_{{nickname}}">
                         Parameters
                     </h4>
-
-                    <div data-content class="operation-params collapse in" id="parm-{{parentId}}_{{nickname}}">
-                    </div>
-
+                    <div data-content class="operation-params collapse in" id="parm-{{parentId}}_{{nickname}}"></div>
                 {{/if}}
 
-                <h4 data-control data-toggle="collapse" data-target="#test-{{parentId}}_{{nickname}}">
-                    Test this endpoint
-                </h4>
+                <h4 data-control data-toggle="collapse" data-target="#test-{{parentId}}_{{nickname}}"></h4>
 
                 <div id="test-{{parentId}}_{{nickname}}">
                     <div class="sandbox_header collapse in" data-content>
-                        <input class="submit btn btn-primary" name="commit" type="submit" value="Try"
+                        <input class="submit btn btn-primary" name="commit" type="submit" value="Testar este endpoint"
                                data-target="#get_clients-modal-request">
                         <a href="#" class="response_hider hide" style="display: inline;">Hide Response</a>
                         <!--small class="curl-copy-message hide" style="display:none;">Copied to clipboard</small-->
@@ -76,23 +72,22 @@
 
                 {{#if responseMessages}}
                     <div style="margin:0;padding:0;display:inline"></div>
-                    <h4 class="response-messages" data-control data-toggle="collapse" data-target="#response-{{parentId}}_{{nickname}}">
-                        Mensagens de Resposta:
-                    </h4>
 
-                    <div data-content class="responses-wrapper collapse in" id="response-{{parentId}}_{{nickname}}">
-                        <table class="fullwidth">
-                            <tbody class="operation-status">
-                            </tbody>
-                        </table>
-                    </div>
+                      <h4 class="response-messages" data-control data-toggle="collapse" data-target="#response-{{parentId}}_{{nickname}}">
+                          Mensagens de Resposta:
+                      </h4>
+
+                      <div data-content class="responses-wrapper collapse in" id="response-{{parentId}}_{{nickname}}">
+                          <table class="fullwidth">
+                              <tbody class="operation-status"></tbody>
+                          </table>
+                      </div>
                 {{/if}}
             </form>
         </div>
 
         <div class="samples">
-            <span class="model-signature">
-            </span>
+            <span class="model-signature"></span>
         </div>
 
         <div class="modal" id="modal-{{parentId}}_{{nickname}}">
@@ -105,25 +100,22 @@
                         <h3 class="modal-title">
                             {{summary}}
                             <span class="http_method">
-                                <span class="text">
-                                    {{method}}
-                                </span>
+                                <span class="text">{{method}}</span>
                             </span>
                         </h3>
                     </div>
                     <div class="modal-body">
                         <div class='response'>
                             <h5>Request URL</h5>
-
                             <div class='block request_url'></div>
+
                             <h5>Response Body</h5>
-
                             <div class='block response_body'></div>
+
                             <h5>Response Code</h5>
-
                             <div class='block response_code'></div>
-                            <h5>Response Headers</h5>
 
+                            <h5>Response Headers</h5>
                             <div class='block response_headers'></div>
                         </div>
                     </div>

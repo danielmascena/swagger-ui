@@ -48,7 +48,7 @@
 @media (min-width: 992px) {
     .swagger-section #resources:before {
         content: "";
-        background: #5c666f;
+        background: #8F8E8D;
         height: 100%;
         width: 50%;
         top: 0;
@@ -285,10 +285,7 @@
     .swagger-section .parameter-item .param-property {
         position: relative;
         width: 70%;
-    }
-
-    .swagger-section .parameter-item .param-property:hover {
-        background: #f0f0f2
+        text-align: left;
     }
 }
 
@@ -354,10 +351,10 @@
 
 @media (min-width: 992px) {
     .swagger-section .operations .model-signature h4 {
-        color: #fff;
+        color: #E5E4E3;
         text-transform: uppercase;
         letter-spacing: .08em;
-        font-size: 14px
+        font-size: 18px;
     }
 }
 
@@ -537,7 +534,7 @@
 }
 
 .swagger-section pre {
-    background: #4e575e;
+    background: #6B6B6A;
     margin: 0;
     word-wrap: break-word !important;
     max-height: none;
@@ -546,18 +543,30 @@
 }
 
 .swagger-section pre code {
-    color: #fff;
+    color: #E5E4E3;
     background: none !important
 }
 
+.response-container {
+  margin: auto;
+}
+.sandbox { text-align: center; }
+.sandbox h4[data-parm-toggle] {
+  text-align: left;
+  float: left;
+  padding-left: 40px !important;
+  width: 100%;
+  width: -webkit-fill-available;
+}
 @media (min-width: 992px) {
     .swagger-section .responses-wrapper {
         padding: 0 0 20px;
         display: inline-block;
     }
     .swagger-section .sandbox .responses-wrapper table.fullwidth {
-      width: auto;
-      display: inline-table;
+        width: auto;
+        display: inline-table;
+        font-size: 20px;
     }
 }
 
@@ -573,20 +582,12 @@
     }
 }
 
-.swagger-section .operation-status td {
+.swagger-section .responses-wrapper .operation-status td {
     width: auto;
-    vertical-align: middle;
+    color: #6B6B6A;
+    font-weight: 600;
     border-bottom: 1px solid #e8eaeb;
-    line-height: 1.4;
-    padding: 15px
-}
-
-.swagger-section .operation-status td:nth-child(1) {
-    padding: 20px
-}
-
-.swagger-section .operation-status td:nth-child(2) {
-    color: #8c9299
+    padding: 15px 5px;
 }
 
 .swagger-section .token-generator {
@@ -865,16 +866,12 @@
     cursor: pointer;
     box-shadow: inset 0 -1px 0 0 #e8eaeb;
     transition: box-shadow 0 300ms ease;
-    min-width: 320px;
     position: relative;
     display: inline-block;
 }
 @media (min-width: 992px) {
   .swagger-section .operations h4.response-messages {
-    min-width: 50%;
-    text-align: right;
-    padding-right: 0;
-    padding-left:0;
+    padding: 15px 10px;
   }
 }
 @media (min-width: 992px) {
@@ -1885,7 +1882,7 @@ body {
 .swagger-section .swagger-ui-wrap caption, .swagger-section .swagger-ui-wrap td, .swagger-section .swagger-ui-wrap th {
     text-align: left;
     font-weight: 400;
-    vertical-align: middle
+    vertical-align: baseline;
 }
 
 .swagger-section .swagger-ui-wrap form.formtastic fieldset.inputs ol li.text textarea {
